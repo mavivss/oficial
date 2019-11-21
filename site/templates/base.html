@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='_css/css.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='_css/css.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='imagens/icon.png')}}"/>
+
+    
+    {% block head %}
+    {% endblock head %}
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="a">
+        <div align="center" id="menu" >
+        <a id="menu" href="/index">HOME</a>
+        <a id="menu" href="/login">LOGIN</a>
+        <a id="menu" href="/cadastre" >CADASTRE-SE</a>
+        <a id="menu" href="/doacoes">FAÇA SUA DOAÇÃO</a>
+       
+              
+    </div>
+    {% block conteudo %}
+    {% endblock conteudo %}
+
+    {% block login %}
+    {% endblock login %}
+
+    {% block doacoes %}
+    {% endblock doacoes %}
+
+    {% block cadastre %}
+    {% endblock cadastre %}
+
+
+    <div id="rodape">
+            <footer><br/>
+                <div align="center"><img src="{{url_for('static', filename='imagens/redesocial.png')}}"><br/><br/></div>
+                <div align="center">
+                Quer fazer parte desse movimento?Não tem uma conta ainda?<a href="{{url_for('static', filename='cadastre.html')}}">Cadastre-se</a> ou <a href="{{url_for('static', filename='login.html')}}">Entre</a></div>
+                
+            <h5 align="center">©2019-2019</h5>
+                </footer>
+            </div>
+</body>
+</html>
